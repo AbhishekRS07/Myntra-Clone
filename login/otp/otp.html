@@ -5,11 +5,90 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>otp</title>
+    <style>
+        body{
+            background-color: rgb(253,239,235);
+           
+        }
+.otpcontain{
+    background-color:rgb(255,255,255);
+    width: 450px;
+    height: 520px;
+    margin: auto;
+    margin-top: 100px;
+}
+.otpd1{
+    margin-top: 40px;
+    width: 220px;
+    height: 30px;
+    background-color: blue;
+    margin-left: 25px;
+}
+.otpd1>input{
+    width: 100%;
+    height: 100%;
+}
+.otpd2{
+    margin-left: 25px;
+    margin-top: 40px;
+}
+.otpd2>button{
+    width: 150px;
+    height: 25px;
+    background-color: rgb(253, 160, 181);
+    cursor: pointer;
+    border: none;
+    color: white;
+}
+.otpimg>img{
+    width: 100%;
+}
+.otptxt1{
+    margin-left: 25px;
+    margin-top: 35px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+span{
+    color: rgb(254, 61, 106);
+}
+    </style>
 </head>
 <body>
-    <input id="otpinput" type="text">
-    <button id="otpsubmit">Submit</button>
+    <div class="otpcontain">
+        <div class="otpimg">
+           <img src="./otp1.png" alt="otp img not found">
+        </div>
+        <div class="otpd1">
+            <input id="otpinput" type="text">
+        </div>
+        <div class="otpd2">
+            <button id="otpsubmit">Submit</button>
+        </div>
+        <div class="otptxt1">
+            <p>Log in using password</p>
+        </div>
+        <div class="otptxt1">
+            <p>Having trouble logging in?<span>Get Help</span></p>
+        </div>
+    </div>
 </body>
 </html>
 
-<script src="./otp.js"></script>
+<script>
+    
+document.getElementById("otpsubmit").addEventListener("click", otpcheck)
+
+function otpcheck(){
+
+  var data=  document.getElementById("otpinput").value
+   console.log(data)
+  if(data=="1234"){
+    localStorage.setItem("login" , true)
+    window.location.replace("./../../homepage/homepage.html")
+    alert("Login successful")
+  }
+  else{
+    alert("Please Enter Valid OTP")
+  }
+}
+</script>
