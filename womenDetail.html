@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/b/bc/Myntra_Logo.png?20210915004801" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men Product Details</title>
+    <style>
+        
+        body{
+            background: #f2f2ed;
+            padding: 0px;
+            margin: 0px;
+        }
+        .navbarM{
+            display: flex;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            height: 85px;
+           align-items: center;
+           font-weight: bolder;
+           font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+           position: sticky;top: 0px;
+           background-color: white;
+           font-size: 12px;
+           color: #1d1c1c;
+           margin-top: -10px;
+          width: 100%;
+           
+        }
+        .categoryM>ul{
+            display: flex;
+        }
+        .categoryM>ul>li{
+            margin-right: 35px;
+            list-style: none;
+            
+        }
+        .logoM>img{
+           width: 55px;
+           margin-left: 50px;
+        }
+        
+        .optionsM>ul{
+            display: flex;
+        }
+        .optionsM>ul>li{
+            display: flex;
+            margin-right: 20px;
+        }
+        .optionsM{
+            display: flex;
+            margin-left: 120px;
+            justify-content: center;
+            align-items: center;
+        }
+        .insertM{
+            height: 30px;
+            width: 500px;
+            border: none;
+            background-color: #f2f2ed;
+            margin-left: -110px;
+           padding: 3px;
+        }
+        #itemPD{
+            color: rgb(255, 255, 255);
+            background: #fa4747;
+            padding: 2px 8px;
+            border-radius: 15px;
+            text-align: center;
+            position: relative;
+            top: -10px;
+        }
+        .optionsM>ul>li{
+            margin-left: 20px;
+        }
+        a{
+            color: #000;
+            text-decoration: none;
+        }
+
+        /*  */
+       
+      h1{
+            width: 25%;
+            margin: auto;
+            margin-top: 2%;
+            box-shadow: rgba(233, 15, 138, 0.35) 0px 10px 25px;
+            color: #514d4d;
+            text-align: center;
+      }
+      #mainPD{
+        margin-top: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #mainPD>#PD1{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        margin: 20px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        background-color: whitesmoke;
+        width: 30%;
+        margin: auto;
+        height: 60vh;
+        font-size: 20px;
+       margin-left: 200px;
+       border-radius: 10px;
+       box-shadow: rgba(233, 15, 138, 0.35) 0px 10px 25px;
+       transition : all 0.5s ease-in-out;
+      }
+      #mainPD>#PD1:hover{
+            transform: scale(1.1);
+         }
+      #imageM{
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+      }
+      #mainPD>#PD2{
+       
+        margin: 20px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        background-color: whitesmoke;
+        width: 30%;
+        margin: auto;
+        height: 60vh;
+       
+        margin-right: 200px;
+        border-radius: 10px;
+       box-shadow: rgba(233, 15, 138, 0.35) 0px 10px 25px;
+
+      }
+      #mainPD>#PD2>div{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+       
+        font-size: 18px;
+        font-weight: bold;
+      }
+      #mainPD>#PD2>div>h2{
+        color: #514d4d;
+      }
+
+     #boxM{
+        display: flex;
+        justify-content: space-between;
+     }
+     p+p{
+        color: #e43333;
+        margin-left: 30px;
+        text-decoration: line-through;
+     }
+     #btnPD1, #btnM{
+        background-color: #f342ac;
+       
+        color: whitesmoke;
+        margin-top: 40px;
+        width: 70%;
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+     }
+
+     #btnPD1:hover, #btnM:hover{
+        background-color: #deabc9;
+     }
+    
+     
+     #inputC{
+            border: 1px solid red;
+            border-radius: 5px;
+            padding: 5px ;
+            text-align: center;
+            width: 50%;
+        }
+
+        #promoC{
+            margin-left: 5%;
+            background-color: #ed3b74;
+            color: #ffffff;
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+            margin: 20px;
+            
+        }
+        #promoC:hover{
+            background-color: #d3879f;
+        }
+
+        /*  */
+    </style>
+</head>
+<body>
+
+    <nav class="navbarM">
+        <div class="logoM">
+          <img id="logoM" src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Myntra_Logo.png?20210915004801" alt="">
+        </div>
+        <div class="categoryM">
+          <ul>
+            <li><a href="men.html">MEN</a></li>
+            <li><a href="woman.html">WOMANS</a></li>
+            <li><a href="kid.html">KIDS</a></li>
+            <li>HOME AND LIVING</li>
+            <li>BEAUTY</li>
+            <li>STUDIO</li>
+          </ul>
+        </div>
+        <div class="optionsM">
+            <input placeholder="Search for products, brands and more" class="insertM" type="text">
+            <ul>
+                <li><a href="login.html">Profile</a></li>
+                <li><a href="#"></a>Wishlist</li>
+                <li><a href="cart.html">Bag<span id="itemPD">0</span></a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <h1>Women Product Details</h1>
+    <div id="mainPD">
+        <div id="PD1"></div>
+        <div id="PD2"></div>
+    </div>
+</body>
+<script>
+      
+      var pArrW =JSON.parse(localStorage.getItem("productWomen"))||[];
+
+    displayPD();
+
+    function  displayPD(){
+
+        document.getElementById("PD1").textContent="";
+        document.getElementById("PD2").textContent="";
+
+        pArrW.map(function(elm){
+            var divM=document.createElement("div");
+      
+
+        var imageM=document.createElement("img");
+        imageM.setAttribute("id","imageM");
+        imageM.setAttribute("src",elm.image_url);
+        imageM.setAttribute("alt",elm.name);
+
+        var h5M =document.createElement("h2");
+        h5M.textContent=elm.name;
+
+        
+
+        var priceBoxM=document.createElement("div");
+        priceBoxM.setAttribute("id","boxM");
+
+        var priceM=document.createElement("p");
+        priceM.textContent="Discounted Price : ₹ "+elm.price
+        priceM.setAttribute("id","priceMD")
+
+        var MRPM=document.createElement("p");
+        MRPM.textContent="Price: ₹ "+elm.strikedoffprice;
+
+
+        var btnPD1 =document.createElement("button");
+        btnPD1.textContent="Return"
+        btnPD1.setAttribute("id","btnPD1");
+        btnPD1.addEventListener("click",returnFunM);
+
+        var btnPD2 =document.createElement("button");
+        btnPD2.textContent="Add to Cart"
+        btnPD2.setAttribute("id","btnM");
+        btnPD2.addEventListener("click",function(){addCartPD(elm)});
+           // 
+        
+        var inputC=document.createElement("input");
+       inputC.setAttribute("id","inputC")
+       inputC.setAttribute("placeholder","Enter Promo Code")
+       var promoC=document.createElement("button");
+       promoC.setAttribute("id","promoC")
+       promoC.textContent="Apply Promo"
+       promoC.addEventListener("click",addDiscount);
+       
+       var promoCode =document.createElement("div");
+       promoCode.setAttribute("id","promoCode");
+       
+        // 
+     function addDiscount(){
+       var select= document.getElementById("inputC").value;
+
+        if( select=== "m20"){
+            var a=elm.price-((elm.price*20)/100);
+
+        document.getElementById("priceMD").textContent="Price After 20% Discount  : ₹ "+a;
+        document.getElementById("priceMD").style.color="green";
+        }else{
+            alert("Promo Code Is Not Valid")
+        }
+     };
+
+
+
+
+
+        
+        promoCode.append(inputC,promoC)
+        // appending of elements
+
+          priceBoxM.append(priceM,MRPM);
+          divM.append(h5M,priceBoxM,promoCode,btnPD2,btnPD1);
+          document.getElementById("PD1").append(imageM);
+          document.getElementById("PD2").append(divM);
+
+       
+    });
+}
+ var cartArrPD1=JSON.parse(localStorage.getItem("aadToCart1")) || [];
+
+    function addCartPD(elm){
+      cartArrPD1.push(elm);
+      localStorage.setItem("aadToCart1", JSON.stringify(cartArrPD1));
+      localStorage.removeItem("productWomen");
+      window.location.replace("./woman.html");
+    }
+
+   
+    function returnFunM(){
+        localStorage.removeItem("productWomen");
+        window.location.replace("./woman.html");
+
+    }
+
+    var cart1PD =JSON.parse(localStorage.getItem("aadToCart1"))||[];
+      var cart2PD =JSON.parse(localStorage.getItem("aadToCart2"))||[];
+      var cart3PD =JSON.parse(localStorage.getItem("aadToCart3"))||[];
+
+      var totalIPD=cart1PD.length+cart2PD.length+cart3PD.length;
+      document.querySelector("#itemPD").textContent=totalIPD;
+
+      document.getElementById("logoM").addEventListener("click",logoFunM);
+   function logoFunM(){
+    window.location.replace("./index.html")
+   };
+
+</script>
+</html>
