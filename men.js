@@ -17,7 +17,7 @@
     {
         image_url:
         "https://img3.junaroad.com/uiproducts/18292711/zoom_0-1646913841.jpg",
-        name: "MEN'S Adidas  Fitness Jersey",
+        name: "MEN'S Adidas  Jersey",
         price: 399,
         strikedoffprice: 799,
     },
@@ -66,7 +66,7 @@
     {
         image_url:
         "https://rukminim1.flixcart.com/image/832/832/xif0q/trouser/v/7/m/36-light-grey-3-paax-original-imaghjafwz2wypje.jpeg?q=70",
-        name: "MEN'S REEBOK Track Pants  ",
+        name: "MEN'S REEBOK  Pants  ",
         price: 1299,
         strikedoffprice: 1440,
     },

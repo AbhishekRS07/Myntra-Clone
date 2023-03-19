@@ -27,7 +27,7 @@
     {
         image_url:
         "https://rukminim1.flixcart.com/image/832/832/xif0q/dress/l/u/s/l-5700-varnifashion-original-imagfh6478nhvm7f.jpeg?q=70",
-        name: "Women's Casual Puff Sleeves ",
+        name: "Women's Casual Puff ",
         price: 1220,
         strikedoffprice: 2099,
         q:1,
@@ -155,7 +155,7 @@
     {
         image_url:
         "https://img.thewhitepole.com/resized/412X548/1229/sf524-blue-6360d9f91c66f.jpg",
-        name: "Women's Tame Denim Boot",
+        name: "Women's Denim Boot",
         price: 699,
         strikedoffprice: 999,
         q:1,
@@ -195,7 +195,7 @@
     {
         image_url:
         "https://rukminim1.flixcart.com/image/832/832/xif0q/dress/l/u/s/l-5700-varnifashion-original-imagfh6478nhvm7f.jpeg?q=70",
-        name: "Women's Casual Puff Sleeves ",
+        name: "Women's Casual Puff ",
         price: 1220,
         strikedoffprice: 2099,
         q:1,
