@@ -3,227 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/b/bc/Myntra_Logo.png?20210915004801" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart</title>
-    <style>
-        body{ text-align: center;}
-        #container{
-            display: flex;
-            justify-content: space-around;
-            /* align-items: center; */
-        }
-        #main{
-            display: flex;
-            justify-content: space-evenly;
-            flex-direction: column;
-            /* gap: 10px; */
-           background-color: rgb(240, 213, 210);
-           width: 65%;
-           /* height: 500px; */
-           padding: 10px;
-        }
-        #main>div{
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            width: 100%;
-            margin: 5px;
-        }
-        .image{
-            border-radius: 10px;
-            width: 150px;
-            height: 200px;
-        }
-        .quantity{
-            display: flex;
-            justify-content: space-around;
-            align-items: center; 
-            width: 30%;
-        }
-        #input{
-            border: 1px solid red;
-            border-radius: 5px;
-            padding: 5px ;
-            text-align: center;
-            width: 20%;
-        }
-        #cost{
-            background-color: rgb(192, 212, 226);
-            width: 30%;
-           height: 400px;
-        }
-        #promo{
-            width: 10%;
-            background-color: #11e523;
-            border-radius: 5px;
-            /* margin-left: -20px; */
-            padding: 5px;
-            border: none;
-            font-size: 10px;
-            font-weight: bold;
-        }
-        .remove{
-            width: 40%;
-            background-color: #ef6666;
-            border-radius: 5px;
-           padding: 8px;
-            border: none;
-            margin-left: 40px;
-        }
-        #payment{
-            width: 10%;
-            background-color: #11e523;
-            color: #000;
-            border-radius: 5px;
-            margin-left: -10px;
-            padding: 10px ;
-            border: none;
-            font-size: 12px;
-            font-weight: bold;
-            text-align: center;
-        }
-        a{
-            text-decoration: none;
-        }
-    </style>
+    <link rel="stylesheet" href="./cart.css">
 </head>
 <body>
-    <h1>Bag of Items</h1>
-    <a  href="men.html"><h1>MEN</h1></a>
-    <a  href="woman.html"><h1>WOMEN</h1></a>
-    <a  href="kid.html"><h1>KID</h1></a>
-    
+   
+    <nav class="navbarC">
+        <div class="logoC2">
+          <img id="logoC1" src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Myntra_Logo.png?20210915004801" alt="">
+        </div>
+        <div class="categoryC">
+          <ul>
+            <li><a href="men.html">MEN</a></li>
+            <li><a href="woman.html">WOMANS</a></li>
+            <li><a href="kid.html">KIDS</a></li>
+            <li>HOME AND LIVING</li>
+            <li>BEAUTY</li>
+            <li>STUDIO</li>
+          </ul>
+        </div>
+        <div class="optionsC">
+            <input placeholder="Search for products, brands and more" class="insertC" type="text">
+            <ul>
+                <li><a href="login.html">Profile</a></li>
+                <li><a href="#"></a>Wishlist</li>
+                <li><a href="cart.html">Bag <span id="itemC">0</span></a></li>
+            </ul>
 
-    <div id="container">
-         <div id="main"></div>
-         <div id="cost"> </div>
+        </div>
+    </nav> 
+
+    <div id="containerC">
+        <div id="MainC">
+            <div id="mainC"></div>
+            <div id="main1C"></div>
+            <div id="main2C"></div>
+        </div>
+         <div id="costC"> </div>
     </div>
 </body>
-<script>
-    var cart =JSON.parse(localStorage.getItem("aadToCart1"))||[];
-    var cart2 =JSON.parse(localStorage.getItem("aadToCart2"))||[];
-    var cartVal=0;
-   
-    if(cart.length === 0 ){
-
-        document.querySelector("#main").textContent="Add Some Products To Cart";
-    }
-    else{
-       
-        displayCart1();
-        totalPrice();
-    }
-
-    function displayCart1(){
-        
-        document.querySelector("#main").textContent="";
-       cart.map(function(elem, index){
-           var div= document.createElement("div");
-           var image= document.createElement("img");
-           
-          image.setAttribute("class" ,"image");
-          image.setAttribute("src",elem.image_url);
-          image.setAttribute("alt",elem.name);
-          var h5 =document.createElement("h5");
-          h5.textContent=elem.name;
-          
-          var box=document.createElement("div");
-          box.setAttribute("class","quantity");
-          
-          var q=document.createElement("select");
-          q.setAttribute("id","select")
-           q.textContent="";
-           var op1=document.createElement("option");
-            op1.setAttribute("value",1);
-            op1.textContent=1;
-            var op2=document.createElement("option");
-            op2.setAttribute("value",2);
-            op2.textContent=2;
-            var op3=document.createElement("option");
-            op3.setAttribute("value",3);
-            op3.textContent=3;
-            
-         
-            
-          var price=document.createElement("p");
-          price.textContent=" ₹ "+elem.price;
-          
-
-           var remove=document.createElement("button");
-           remove.textContent="Remove Item";
-           remove.setAttribute("class","remove")
-           remove.addEventListener("click",function(){removeItem(elem,index)})
-
-//          appending
-
-           q.append(op1,op2,op3);
-          box.append(q, price, remove)
-          div.append(image,h5, box)
-          div.setAttribute("class","cartProd");
-          document.querySelector("#main").append(div);
-         
-       });
-       
-    };
-    var deleteArr=JSON.parse(localStorage.getItem("deleteArr"))||[];
-
-    function removeItem(elem,index){
-        deleteArr.push(elem);
-        localStorage.setItem("deleteArr", JSON.stringify(deleteArr));
-      cart.splice(index,1);
-      localStorage.setItem("aadToCart1", JSON.stringify(cart));
-      
-      displayCart1();
-     
-    }
-
-   
-   
- 
-
-   function totalPrice(){
-   
-    for(i=0;i<cart.length; i++){
-        cartVal+=cart[i].price;
-    }
-    
-       var div=document.createElement("div");
-       div.setAttribute("id" ,"box");
-       var p=document.createElement("p");
-       p.textContent="Total Price : "
-       var p1=document.createElement("p");
-       p1.textContent="Total Items : "+ cart.length;
-       var input=document.createElement("input");
-       input.setAttribute("id","input")
-       input.setAttribute("placeholder","Enter Promo Code")
-       var promo=document.createElement("button");
-       promo.setAttribute("id","promo")
-       promo.textContent="Apply Promo"
-       promo.addEventListener("click",addDiscount);
-       total=document.createElement("p");
-       total.textContent="₹ "+ cartVal
-       total.setAttribute("id","total")
-        // 
-     function addDiscount(){
-       var select= document.getElementById("input").value;
-
-        if( select=== "masai30"){
-        document.getElementById("total").textContent=cartVal-((cartVal*30)/100);
-          
-        }else{
-            alert("Promo Code Is Not Valid")
-        }
-     };
-        // 
-        var Payment=document.createElement("a");
-        Payment.setAttribute("id","payment")
-        Payment.textContent="Payment"
-        Payment.setAttribute("href","pay.html")
-    
-    //  appending
-       div.append(p1,input,promo ,p,total,Payment);
-       document.querySelector("#cost").append(div);
-    };
-   
-</script>
+<script src="./cart.js"></script>
 </html>
