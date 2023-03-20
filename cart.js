@@ -381,7 +381,7 @@
         // 
         var PaymentC=document.createElement("a");
         PaymentC.setAttribute("id","paymentC")
-        PaymentC.textContent="Payment"
+        PaymentC.textContent="PLACE ORDER"
         PaymentC.setAttribute("href","address.html")
     
     //  appending
