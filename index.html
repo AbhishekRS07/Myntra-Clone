@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/b/bc/Myntra_Logo.png?20210915004801" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Myntra.com</title>
@@ -329,7 +329,12 @@ justify-content: center;
 div>h1,div>h2,h1+h2,div>h3{
   color: rgb(41, 39, 39);
 }
-
+ /* logo for profile and wishlist */
+  .l{ 
+    margin-right: 8px;
+   
+  }
+ /*  */
 
    </style>
   </head>
@@ -365,9 +370,9 @@ div>h1,div>h2,h1+h2,div>h3{
                 </div>
               </div>
             </p>
-            <p id="dropoutH"><a href="./login.html" >Profile</a></p>
-            <p class="wishH"><a href="#"></a>Wishlist</p>
-            <p class="wishH"></i><a href="./cart.html">Bag<span id="itemH">0</span></a></p>
+            <p id="dropoutH"><i class="fa-regular fa-user l"></i><a href="./login.html" >Profile</a></p>
+            <p class="wishH"><i class="fa-sharp fa-regular fa-heart l"></i><a href="#"></a>Wishlist</p>
+            <p class="wishH"><a href="./cart.html">Bag<span id="itemH">0</span></a></p>
 
       </div>
 
