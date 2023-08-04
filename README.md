@@ -1,6 +1,5 @@
 # Myntra
 
-https://serene-crumble-4652a7.netlify.app/
 <a href="https://www.myntra.com/">url </a>
 <h3>description</h3>
 <p>Myantra Clone Website
